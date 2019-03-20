@@ -43,50 +43,49 @@ public class CategoryController {
         return R.ok().put("page", page);
     }
 
-
     /**
      * 信息
      */
-/*    @RequestMapping("/info/{id}")
+    @RequestMapping("/info/{id}")
     @RequiresPermissions("yak:category:info")
     public R info(@PathVariable("id") Integer id) {
-        CategoryEntity category = categoryService.selectById(id);
+        CategoryEntity category = categoryService.getById( id );
 
         return R.ok().put("category", category);
-    }*/
+    }
 
     /**
      * 保存
      */
-/*    @RequestMapping("/save")
+    @RequestMapping("/save")
     @RequiresPermissions("yak:category:save")
     public R save(@RequestBody CategoryEntity category) {
-        categoryService.insert(category);
+        categoryService.saveCategory( category );
 
         return R.ok();
-    }*/
+    }
 
     /**
      * 修改
      */
-/*    @RequestMapping("/update")
+    @RequestMapping("/update")
     @RequiresPermissions("yak:category:update")
     public R update(@RequestBody CategoryEntity category) {
-        ValidatorUtils.validateEntity(category);
-        categoryService.updateAllColumnById(category);//全部更新
+        ValidatorUtils.validateEntity( category );
+        categoryService.update( category );
         
         return R.ok();
-    }*/
+    }
 
     /**
      * 删除
      */
-/*    @RequestMapping("/delete")
+    @RequestMapping("/delete")
     @RequiresPermissions("yak:category:delete")
-    public R delete(@RequestBody Integer[] ids) {
-        categoryService.deleteBatchIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        categoryService.deleteBatch( ids );
 
         return R.ok();
-    }*/
+    }
 
 }

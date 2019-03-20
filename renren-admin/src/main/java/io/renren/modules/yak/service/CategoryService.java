@@ -16,5 +16,17 @@ import java.util.Map;
 public interface CategoryService extends IService<CategoryEntity> {
 
 	PageUtils queryPage(Map<String, Object> params);
+
+	/**
+	 * 保存用户
+	 */
+	void saveCategory( CategoryEntity category );
+
+	/**
+	 * Update category
+	 */
+	void update( CategoryEntity category );
+
+	void deleteBatch( Long[] categoryIds );
 }
 
