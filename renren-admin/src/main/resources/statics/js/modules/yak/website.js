@@ -1,12 +1,15 @@
 $(function () {
     $("#jqGrid").jqGrid({
-        url: baseURL + 'yak/category/list',
+        url: baseURL + 'yak/website/list',
         datatype: "json",
         colModel: [			
 			{ label: 'ID', name: 'id', index: 'id', width: 50, key: true },
-			{ label: '分类名称', name: 'name', index: 'name', width: 80 }, 			
+			{ label: '分类ID', name: 'categoryId', index: 'category_id', width: 80 }, 			
+			{ label: '网站名称', name: 'name', index: 'name', width: 80 }, 			
+			{ label: '网址', name: 'url', index: 'url', width: 80 }, 			
 			{ label: '分类图标', name: 'icon', index: 'icon', width: 80 }, 			
-			{ label: '排序（0最靠上）', name: 'sort', index: 'sort', width: 80 }, 			
+			{ label: '描述', name: 'description', index: 'description', width: 80 }, 			
+			{ label: '遮罩描述', name: 'shade', index: 'shade', width: 80 }, 			
 			{ label: '创建时间', name: 'createdAt', index: 'created_at', width: 80 }, 			
 			{ label: '更新时间', name: 'updatedAt', index: 'updated_at', width: 80 }			
         ],
@@ -42,7 +45,7 @@ var vm = new Vue({
 	data:{
 		showList: true,
 		title: null,
-		category: {}
+		website: {}
 	},
 	methods: {
 		query: function () {
@@ -51,7 +54,7 @@ var vm = new Vue({
 		add: function(){
 			vm.showList = false;
 			vm.title = "新增";
-			vm.category = {};
+			vm.website = {};
 		},
 		update: function (event) {
 			var id = getSelectedRow();
@@ -64,12 +67,12 @@ var vm = new Vue({
             vm.getInfo(id)
 		},
 		saveOrUpdate: function (event) {
-			var url = vm.category.id == null ? "yak/category/save" : "yak/category/update";
+			var url = vm.website.id == null ? "yak/website/save" : "yak/website/update";
 			$.ajax({
 				type: "POST",
 			    url: baseURL + url,
                 contentType: "application/json",
-			    data: JSON.stringify(vm.category),
+			    data: JSON.stringify(vm.website),
 			    success: function(r){
 			    	if(r.code === 0){
 						alert('操作成功', function(index){
@@ -90,7 +93,7 @@ var vm = new Vue({
 			confirm('确定要删除选中的记录？', function(){
 				$.ajax({
 					type: "POST",
-				    url: baseURL + "yak/category/delete",
+				    url: baseURL + "yak/website/delete",
                     contentType: "application/json",
 				    data: JSON.stringify(ids),
 				    success: function(r){
@@ -106,8 +109,8 @@ var vm = new Vue({
 			});
 		},
 		getInfo: function(id){
-			$.get(baseURL + "yak/category/info/"+id, function(r){
-                vm.category = r.category;
+			$.get(baseURL + "yak/website/info/"+id, function(r){
+                vm.website = r.website;
             });
 		},
 		reload: function (event) {
