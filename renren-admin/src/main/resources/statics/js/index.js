@@ -3,7 +3,7 @@ var menuItem = Vue.extend({
     name: 'menu-item',
     props:{item:{}},
     template:[
-        '<li>',
+        '<li class="active">',
         '	<a v-if="item.type === 0" href="javascript:;">',
         '		<i v-if="item.icon != null" :class="item.icon"></i>',
         '		<span>{{item.name}}</span>',

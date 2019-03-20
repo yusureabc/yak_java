@@ -3,7 +3,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/renren_security?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      url: jdbc:mysql://localhost:3306/yak_java?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
       username: yusure
       password: yukill56
       initial-size: 10
