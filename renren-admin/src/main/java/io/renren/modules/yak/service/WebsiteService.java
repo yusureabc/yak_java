@@ -18,5 +18,9 @@ public interface WebsiteService extends IService<WebsiteEntity> {
     PageUtils queryPage( Map< String, Object > params );
 
     void saveWebsite( WebsiteEntity website );
+
+    void update( WebsiteEntity website );
+
+    void deleteBatch( Long[] websiteIds );
 }
 

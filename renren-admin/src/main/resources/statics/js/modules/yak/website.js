@@ -78,7 +78,7 @@ var vm = new Vue({
             // 加载分类树
             $.get( baseURL + "yak/category/list", function(r) {
                 ztree = $.fn.zTree.init( $("#categoryTree"), setting, r.page.list );
-                var node = ztree.getNodeByParam( "categoryId", vm.website.categoryId );
+                var node = ztree.getNodeByParam( "id", vm.website.categoryId );
                 if ( node != null )
                 {
                     ztree.selectNode( node );
@@ -142,6 +142,8 @@ var vm = new Vue({
         getInfo: function(id){
             $.get(baseURL + "yak/website/info/"+id, function(r){
                 vm.website = r.website;
+
+                vm.getCategory();
             });
         },
         categoryTree: function() {

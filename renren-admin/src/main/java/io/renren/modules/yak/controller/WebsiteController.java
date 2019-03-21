@@ -48,13 +48,13 @@ public class WebsiteController {
     /**
      * 信息
      */
-/*    @RequestMapping("/info/{id}")
+    @RequestMapping("/info/{id}")
     @RequiresPermissions("yak:website:info")
-    public R info(@PathVariable("id") Integer id){
-        WebsiteEntity website = websiteService.selectById(id);
+    public R info(@PathVariable("id") Integer id) {
+        WebsiteEntity website = websiteService.getById( id );
 
-        return R.ok().put("website", website);
-    }*/
+        return R.ok().put( "website", website );
+    }
 
     /**
      * 保存
@@ -70,24 +70,24 @@ public class WebsiteController {
     /**
      * 修改
      */
-/*    @RequestMapping("/update")
+    @RequestMapping("/update")
     @RequiresPermissions("yak:website:update")
-    public R update(@RequestBody WebsiteEntity website){
-        ValidatorUtils.validateEntity(website);
-        websiteService.updateAllColumnById(website);//全部更新
+    public R update(@RequestBody WebsiteEntity website) {
+        ValidatorUtils.validateEntity( website );
+        websiteService.update( website );
         
         return R.ok();
-    }*/
+    }
 
     /**
      * 删除
      */
-/*    @RequestMapping("/delete")
+    @RequestMapping("/delete")
     @RequiresPermissions("yak:website:delete")
-    public R delete(@RequestBody Integer[] ids){
-        websiteService.deleteBatchIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        websiteService.deleteBatch( ids );
 
         return R.ok();
-    }*/
+    }
 
 }

@@ -3,6 +3,8 @@ package io.renren.modules.yak.service.impl;
 import io.renren.modules.yak.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Date;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -44,6 +46,17 @@ public class WebsiteServiceImpl extends ServiceImpl<WebsiteDao, WebsiteEntity> i
         website.setCreatedAt( new Date() );
         website.setUpdatedAt( new Date() );
         this.save( website );
+    }
+
+    @Override
+    public void update( WebsiteEntity website ) {
+        website.setUpdatedAt( new Date() );
+        this.updateById( website );
+    }
+
+    @Override
+    public void deleteBatch( Long[] websiteIds ) {
+        this.removeByIds( Arrays.asList( websiteIds ) );
     }
 
 }
