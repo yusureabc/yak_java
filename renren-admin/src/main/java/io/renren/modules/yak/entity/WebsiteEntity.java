@@ -2,6 +2,7 @@ package io.renren.modules.yak.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -57,4 +58,6 @@ public class WebsiteEntity implements Serializable {
 	 */
 	private Date updatedAt;
 
+	@TableField(exist=false)
+	private String categoryName;
 }

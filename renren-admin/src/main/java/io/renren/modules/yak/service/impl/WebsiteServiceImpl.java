@@ -1,5 +1,7 @@
 package io.renren.modules.yak.service.impl;
 
+import io.renren.modules.yak.service.CategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import java.util.Date;
@@ -12,10 +14,14 @@ import io.renren.common.utils.Query;
 import io.renren.modules.yak.dao.WebsiteDao;
 import io.renren.modules.yak.entity.WebsiteEntity;
 import io.renren.modules.yak.service.WebsiteService;
+import io.renren.modules.yak.entity.CategoryEntity;
+import io.renren.modules.yak.service.CategoryService;
 
 
 @Service("websiteService")
 public class WebsiteServiceImpl extends ServiceImpl<WebsiteDao, WebsiteEntity> implements WebsiteService {
+    @Autowired
+    private CategoryService categoryService;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -23,6 +29,12 @@ public class WebsiteServiceImpl extends ServiceImpl<WebsiteDao, WebsiteEntity> i
             new Query<WebsiteEntity>().getPage(params),
             new QueryWrapper<WebsiteEntity>()
         );
+
+        /* 通过 category_id 查找 CategoryName */
+        for ( WebsiteEntity websiteEntity : page.getRecords() ) {
+            CategoryEntity categoryEntity = categoryService.getById( websiteEntity.getCategoryId() );
+            websiteEntity.setCategoryName( categoryEntity.getName() );
+        }
 
         return new PageUtils(page);
     }
