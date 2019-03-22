@@ -1,0 +1,19 @@
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>User Name</th>
+        <th>Password</th>
+        <th>Age</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  th:each="category : ${categories}">
+        <th scope="row" th:text="${category.id}">1</th>
+        <td th:text="${category.name}"></td>
+        <td th:text="${category.sort}"></td>
+    </tr>
+    </tbody>
+</table>
