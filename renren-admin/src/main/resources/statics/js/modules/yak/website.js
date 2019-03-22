@@ -7,7 +7,7 @@ $(function () {
             { label: '分类', name: 'categoryName', index: 'category_name', width: 80 },
             { label: '网站名称', name: 'name', index: 'name', width: 80 },
             { label: '网址', name: 'url', index: 'url', width: 80 },
-            { label: '分类图标', name: 'icon', index: 'icon', width: 80 },
+            { label: '网站图标', name: 'icon', index: 'icon', width: 80 },
             { label: '描述', name: 'description', index: 'description', width: 80 },
             { label: '遮罩描述', name: 'shade', index: 'shade', width: 80 },
             { label: '创建时间', name: 'createdAt', index: 'created_at', width: 80 },
