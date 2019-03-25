@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2019-03-22 17:31:47
+Date: 2019-03-25 17:29:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -110,6 +110,7 @@ CREATE TABLE `qrtz_fired_triggers` (
 -- ----------------------------
 -- Records of qrtz_fired_triggers
 -- ----------------------------
+INSERT INTO `qrtz_fired_triggers` VALUES ('RenrenScheduler', 'BF-20171004ZYSM15534821309041553482130889', 'TASK_1', 'DEFAULT', 'BF-20171004ZYSM1553482130904', '1553506179402', '1553506200000', '5', 'ACQUIRED', null, null, '0', '0');
 
 -- ----------------------------
 -- Table structure for qrtz_job_details
@@ -181,7 +182,7 @@ CREATE TABLE `qrtz_scheduler_state` (
 -- ----------------------------
 -- Records of qrtz_scheduler_state
 -- ----------------------------
-INSERT INTO `qrtz_scheduler_state` VALUES ('RenrenScheduler', 'BF-20171004ZYSM1553156604365', '1553168610800', '15000');
+INSERT INTO `qrtz_scheduler_state` VALUES ('RenrenScheduler', 'BF-20171004ZYSM1553482130904', '1553506182964', '15000');
 
 -- ----------------------------
 -- Table structure for qrtz_simple_triggers
@@ -269,7 +270,7 @@ CREATE TABLE `qrtz_triggers` (
 -- ----------------------------
 -- Records of qrtz_triggers
 -- ----------------------------
-INSERT INTO `qrtz_triggers` VALUES ('RenrenScheduler', 'TASK_1', 'DEFAULT', 'TASK_1', 'DEFAULT', null, '1553169600000', '1553167800000', '5', 'WAITING', 'CRON', '1551945313000', '0', null, '2', 0xACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787001737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000D4A4F425F504152414D5F4B45597372002E696F2E72656E72656E2E6D6F64756C65732E6A6F622E656E746974792E5363686564756C654A6F62456E7469747900000000000000010200074C00086265616E4E616D657400124C6A6176612F6C616E672F537472696E673B4C000A63726561746554696D657400104C6A6176612F7574696C2F446174653B4C000E63726F6E45787072657373696F6E71007E00094C00056A6F6249647400104C6A6176612F6C616E672F4C6F6E673B4C0006706172616D7371007E00094C000672656D61726B71007E00094C00067374617475737400134C6A6176612F6C616E672F496E74656765723B7870740008746573745461736B7372000E6A6176612E7574696C2E44617465686A81014B597419030000787077080000016957203F487874000E3020302F3330202A202A202A203F7372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000000174000672656E72656E74000CE58F82E695B0E6B58BE8AF95737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C75657871007E0013000000007800);
+INSERT INTO `qrtz_triggers` VALUES ('RenrenScheduler', 'TASK_1', 'DEFAULT', 'TASK_1', 'DEFAULT', null, '1553506200000', '1553504400000', '5', 'ACQUIRED', 'CRON', '1551945313000', '0', null, '2', 0xACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787001737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000D4A4F425F504152414D5F4B45597372002E696F2E72656E72656E2E6D6F64756C65732E6A6F622E656E746974792E5363686564756C654A6F62456E7469747900000000000000010200074C00086265616E4E616D657400124C6A6176612F6C616E672F537472696E673B4C000A63726561746554696D657400104C6A6176612F7574696C2F446174653B4C000E63726F6E45787072657373696F6E71007E00094C00056A6F6249647400104C6A6176612F6C616E672F4C6F6E673B4C0006706172616D7371007E00094C000672656D61726B71007E00094C00067374617475737400134C6A6176612F6C616E672F496E74656765723B7870740008746573745461736B7372000E6A6176612E7574696C2E44617465686A81014B597419030000787077080000016957203F487874000E3020302F3330202A202A202A203F7372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000000174000672656E72656E74000CE58F82E695B0E6B58BE8AF95737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C75657871007E0013000000007800);
 
 -- ----------------------------
 -- Table structure for schedule_job
@@ -306,7 +307,7 @@ CREATE TABLE `schedule_job_log` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`log_id`),
   KEY `job_id` (`job_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=142 DEFAULT CHARSET=utf8 COMMENT='定时任务日志';
+) ENGINE=InnoDB AUTO_INCREMENT=155 DEFAULT CHARSET=utf8 COMMENT='定时任务日志';
 
 -- ----------------------------
 -- Records of schedule_job_log
@@ -452,6 +453,19 @@ INSERT INTO `schedule_job_log` VALUES ('138', '1', 'testTask', 'renren', '0', nu
 INSERT INTO `schedule_job_log` VALUES ('139', '1', 'testTask', 'renren', '0', null, '4', '2019-03-21 18:30:00');
 INSERT INTO `schedule_job_log` VALUES ('140', '1', 'testTask', 'renren', '0', null, '2', '2019-03-21 19:00:00');
 INSERT INTO `schedule_job_log` VALUES ('141', '1', 'testTask', 'renren', '0', null, '25', '2019-03-21 19:30:00');
+INSERT INTO `schedule_job_log` VALUES ('142', '1', 'testTask', 'renren', '0', null, '1', '2019-03-25 11:00:00');
+INSERT INTO `schedule_job_log` VALUES ('143', '1', 'testTask', 'renren', '0', null, '4', '2019-03-25 11:30:00');
+INSERT INTO `schedule_job_log` VALUES ('144', '1', 'testTask', 'renren', '0', null, '2', '2019-03-25 12:00:00');
+INSERT INTO `schedule_job_log` VALUES ('145', '1', 'testTask', 'renren', '0', null, '1', '2019-03-25 12:30:00');
+INSERT INTO `schedule_job_log` VALUES ('146', '1', 'testTask', 'renren', '0', null, '1', '2019-03-25 13:00:00');
+INSERT INTO `schedule_job_log` VALUES ('147', '1', 'testTask', 'renren', '0', null, '2', '2019-03-25 13:30:00');
+INSERT INTO `schedule_job_log` VALUES ('148', '1', 'testTask', 'renren', '0', null, '2', '2019-03-25 14:00:00');
+INSERT INTO `schedule_job_log` VALUES ('149', '1', 'testTask', 'renren', '0', null, '1', '2019-03-25 14:30:00');
+INSERT INTO `schedule_job_log` VALUES ('150', '1', 'testTask', 'renren', '0', null, '1', '2019-03-25 15:00:00');
+INSERT INTO `schedule_job_log` VALUES ('151', '1', 'testTask', 'renren', '0', null, '1', '2019-03-25 15:30:00');
+INSERT INTO `schedule_job_log` VALUES ('152', '1', 'testTask', 'renren', '0', null, '1', '2019-03-25 16:00:00');
+INSERT INTO `schedule_job_log` VALUES ('153', '1', 'testTask', 'renren', '0', null, '2', '2019-03-25 16:30:00');
+INSERT INTO `schedule_job_log` VALUES ('154', '1', 'testTask', 'renren', '0', null, '1', '2019-03-25 17:00:00');
 
 -- ----------------------------
 -- Table structure for sys_config
@@ -763,15 +777,31 @@ CREATE TABLE `yak_website` (
   `url` varchar(255) NOT NULL COMMENT '网址',
   `icon` varchar(100) NOT NULL COMMENT '网站图标',
   `description` varchar(200) NOT NULL COMMENT '描述',
-  `shade` varchar(200) NOT NULL COMMENT '遮罩描述',
+  `shade` varchar(200) NOT NULL DEFAULT '' COMMENT '遮罩描述',
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '更新时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COMMENT='网址管理';
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COMMENT='网址管理';
 
 -- ----------------------------
 -- Records of yak_website
 -- ----------------------------
-INSERT INTO `yak_website` VALUES ('2', '1', '0', 'Yeelight 官网', 'https://www.yeelight.com', 'https://www.yeelight.com/yeelight201703/i/favicon.png', 'Yeelight 是由青岛亿联客信息技术有限公司（Yeelink）设计制造的智能情景照明产品。', '@李小东', '2019-03-20 15:48:40', '2019-03-21 15:08:42');
-INSERT INTO `yak_website` VALUES ('3', '2', '0', '1', '1', '1', '1', '1', '2019-03-20 15:51:14', '2019-03-20 15:51:14');
-INSERT INTO `yak_website` VALUES ('4', '1', '0', '1', '1', '1', '1', '1', '2019-03-20 17:22:27', '2019-03-21 14:18:23');
+INSERT INTO `yak_website` VALUES ('2', '1', '0', 'Yeelight 官网', 'https://www.yeelight.com', './images/logos/yeelight.png', 'Yeelight 是由青岛亿联客信息技术有限公司（Yeelink）设计制造的智能情景照明产品。', '@Sheldon 李小东', '2019-03-20 15:48:40', '2019-03-25 16:45:01');
+INSERT INTO `yak_website` VALUES ('3', '2', '0', 'Cloud Manager', 'https://cloud-bj.yeelight.com/man', 'https://www.yeelight.com/yeelight201703/i/favicon.png', 'Yeelight App 后台管理', '@云端组', '2019-03-20 15:51:14', '2019-03-25 16:48:04');
+INSERT INTO `yak_website` VALUES ('4', '1', '0', 'Yeelight官方微博', 'http://weibo.com/yeelight', 'https://weibo.com/favicon.ico', '随时随地发现新鲜事！', '@Marketing', '2019-03-20 17:22:27', '2019-03-25 17:26:56');
+INSERT INTO `yak_website` VALUES ('5', '1', '0', 'Yeelight企业邮箱', 'http://mail.yeelight.com', './images/logos/yeelight.png', 'Yeelight企业邮箱', '@季善玲', '2019-03-25 10:51:57', '2019-03-25 17:27:27');
+INSERT INTO `yak_website` VALUES ('6', '1', '0', 'Yeelight-SS', 'http://192.168.0.44', './images/logos/dsm.png', '文件服务器', '@Jason 贾文鹏', '2019-03-25 10:52:40', '2019-03-25 17:27:43');
+INSERT INTO `yak_website` VALUES ('7', '2', '0', '小米IoT开发者平台', 'https://iot.mi.com/new/index.html', './images/logos/miot.ico', '小米IoT开发者平台', '', '2019-03-25 10:53:09', '2019-03-25 16:52:11');
+INSERT INTO `yak_website` VALUES ('8', '2', '0', 'Gerrit', 'http://gerrit.yeedev.com', './images/logos/gerrit.ico', 'App代码审核服务器', '@Andy 丁宜辰', '2019-03-25 10:53:36', '2019-03-25 16:54:21');
+INSERT INTO `yak_website` VALUES ('9', '2', '0', 'JIRA', 'http://jira.yeedev.com', './images/logos/jira.ico', '问题追踪', '@Andy 丁宜辰', '2019-03-25 10:54:04', '2019-03-25 16:58:49');
+INSERT INTO `yak_website` VALUES ('10', '2', '0', 'Jenkins', 'http://jenkins.yeedev.com:8080', './images/logos/jenkins.ico', 'Jenkins 持续集成', '', '2019-03-25 10:54:31', '2019-03-25 17:01:26');
+INSERT INTO `yak_website` VALUES ('11', '2', '0', 'GitLab', 'http://gitlab.yeedev.com', './images/logos/gitlab.ico', '云端大数据代码仓库', '', '2019-03-25 10:55:09', '2019-03-25 17:05:15');
+INSERT INTO `yak_website` VALUES ('12', '3', '0', '产品站素材库', 'http://192.168.0.44:5000/sharing/8JMhfMGJe', './images/logos/yeelight.png', 'Yeelight 官网产品素材库', '@Designer 设计组', '2019-03-25 10:55:39', '2019-03-25 17:25:09');
+INSERT INTO `yak_website` VALUES ('17', '1', '0', 'Yeelink-DMS', 'http://docs.yeedev.com/out/out.ViewFolder.php?folderid=1', 'http://docs.yeedev.com/styles/bootstrap/favicon.ico', '企业文档管理', '@Sheldon 李小东', '2019-03-25 16:35:19', '2019-03-25 17:28:06');
+INSERT INTO `yak_website` VALUES ('18', '1', '0', '内部商城', 'http://support.yeelight.com/inner_sale/index', './images/logos/yeelight.png', 'Yeelight 内部商城', '', '2019-03-25 16:36:35', '2019-03-25 16:36:56');
+INSERT INTO `yak_website` VALUES ('19', '1', '0', '金蝶云', 'http://yeelight.ik3cloud.com/K3cloud/HTML5/', './images/logos/ik3cloud.ico', '开发的ERP云平台', '@Jason 贾文鹏', '2019-03-25 16:41:15', '2019-03-25 17:28:25');
+INSERT INTO `yak_website` VALUES ('20', '2', '0', 'Nexus', 'http://nexus.yeedev.com:8081/nexus', './images/logos/nexus.png', 'Maven 仓库管理', '', '2019-03-25 17:08:58', '2019-03-25 17:08:58');
+INSERT INTO `yak_website` VALUES ('21', '2', '0', 'Hippo', 'http://hippo.yeelight.com', './images/logos/hippo.png', 'Yeelight大数据平台', '', '2019-03-25 17:12:31', '2019-03-25 17:12:31');
+INSERT INTO `yak_website` VALUES ('22', '2', '0', 'Daily build', 'http://android-dev.yeelight.com', './images/logos/android.ico', 'Android应用每日更新', '@Andy 丁宜辰', '2019-03-25 17:17:58', '2019-03-25 17:26:16');
+INSERT INTO `yak_website` VALUES ('23', '2', '0', 'Yeelink Wiki', 'http://wiki.yeedev.com/index.php?title=首页', './images/logos/yeelight.png', 'Yeelink 产品 Wiki', '', '2019-03-25 17:19:31', '2019-03-25 17:19:31');
+INSERT INTO `yak_website` VALUES ('24', '2', '0', 'Confluence Wiki系统', 'http://confluence.yeedev.com', './images/logos/confluence.ico', '专业的企业知识管理与协同软件', '', '2019-03-25 17:22:21', '2019-03-25 17:22:21');
