@@ -5,12 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="viggo" />
     <title>网址导航</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" href="./images/favicon.png">
-    <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">-->
     <link rel="stylesheet" href="./css/fonts/linecons/css/linecons.css">
     <link rel="stylesheet" href="./css/fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
@@ -63,8 +61,8 @@
         <span th:each="category : ${categories}">
         <!-- 常用推荐 -->
         <h4 class="text-gray" th:text="${category.name}"><i class="linecons-tag" style="margin-right: 7px;" th:id="'category_id_' + ${category.id}"></i></h4>
-        <div class="row" th:each="item : ${websites[category.id]}">
-
+        <div class="row">
+            <span th:each="item : ${websites[category.id]}">
             <div class="col-sm-3">
                 <div class="xe-widget xe-conversations box2 label-info" th:onclick="'window.open(\'' + @{${item.url}} + '\', \'_blank\')'" data-toggle="tooltip" data-placement="bottom" title="" th:data-original-title="${item.shade}">
                     <div class="xe-comment-entry">
@@ -80,9 +78,8 @@
                     </div>
                 </div>
             </div>
-
+            </span>
         </div>
-
         <br />
         <!-- END 常用推荐 -->
         </span>
@@ -96,9 +93,8 @@
             <div class="footer-inner">
                 <!-- Add your copyright text here -->
                 <div class="footer-text">
-                    &copy; 2017
-                    <a href="../cn/about.html"><strong>WebStack</strong></a> design by <a href="http://viggoz.com" target="_blank"><strong>Viggo</strong></a>
-                    <!--  - Purchase for only <strong>23$</strong> -->
+                    &copy; 2019
+                    <strong>Yeelight</strong> Code by <a href="http://yusure.cn" target="_blank"><strong>Scott Yu</strong></a>
                 </div>
                 <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
                 <div class="go-up">
