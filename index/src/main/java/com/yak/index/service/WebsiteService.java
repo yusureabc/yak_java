@@ -13,6 +13,6 @@ import java.util.List;
  */
 public interface WebsiteService {
 
-    public List<Website> getWebsiteListById();
+    public List<Website> getWebsiteList();
 
 }
