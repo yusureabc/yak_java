@@ -4,7 +4,7 @@ server:
     uri-encoding: UTF-8
     max-threads: 1000
     min-spare-threads: 30
-  port: 8075
+  port: 80
 
 spring:
   datasource:
@@ -13,14 +13,14 @@ spring:
     username: yak_sql
     password: yak_sql
   jpa:
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         hbm2ddl:
           auto: update
   thymeleaf:
-    cache: false
+    cache: true
 
 logging:
   level:
