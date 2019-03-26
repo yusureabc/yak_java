@@ -29,7 +29,7 @@ if [ ! -d "$LOGDIR" ];then
 mkdir $LOGDIR
 fi
 
-JARNAME=/lib/$APP_NAME.jar
+JARNAME=lib/$APP_NAME.jar
 LOGFILE=$APP_NAME.boot.log.`date "+%Y%m%d"`
 
 
