@@ -28,7 +28,7 @@ public class IndexController {
     @Resource
     private WebsiteService websiteService;
 
-    @RequestMapping( "/" )
+    @RequestMapping( value = {"/", "index.html"} )
     public String index( Model model ) {
         List< Category > categories = categoryService.getCategoryList();
         List< Website > websites = websiteService.getWebsiteList();
