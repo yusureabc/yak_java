@@ -12,7 +12,7 @@ BASE_PATH=`cd "$(dirname "$0")"; pwd`
 WORKDIR=`cd ..;pwd`
 
 
-JAVA_OPTS='-server -Xmx1g -Xms1g -XX:SurvivorRatio=8 -XX:NewRatio=2 -XX:PermSize=128m -XX:MaxPermSize=256m -XX:+DisableExplicitGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintCommandLineFlags -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:ParallelCMSThreads=4 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection -XX:CMSFullGCsBeforeCompaction=1 -XX:CMSInitiatingOccupancyFraction=50  -DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector'else
+JAVA_OPTS='-server -Xmx256m -Xms256m -XX:SurvivorRatio=8 -XX:NewRatio=2 -XX:PermSize=128m -XX:MaxPermSize=256m -XX:+DisableExplicitGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintCommandLineFlags -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:ParallelCMSThreads=4 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection -XX:CMSFullGCsBeforeCompaction=1 -XX:CMSInitiatingOccupancyFraction=50  -DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector'else
 
 #设置java运行参数 -Xmn256m
 DEFAULT_JAVA_OPTS=" -server -Xmx1g -Xms1g -XX:SurvivorRatio=8 -XX:NewRatio=2 -XX:PermSize=128m -XX:MaxPermSize=256m -XX:+DisableExplicitGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintCommandLineFlags -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:ParallelCMSThreads=4 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection -XX:CMSFullGCsBeforeCompaction=1 -XX:CMSInitiatingOccupancyFraction=50  -DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector "
