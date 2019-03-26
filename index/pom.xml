@@ -8,9 +8,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.yak</groupId>
-    <artifactId>index</artifactId>
+    <artifactId>yak</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>index</name>
+    <name>yak</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
