@@ -98,6 +98,9 @@ var vm = new Vue({
             vm.getInfo(id)
         },
         saveOrUpdate: function (event) {
+            if ( vm.validator() ) {
+                return ;
+            }
             var url = vm.website.id == null ? "yak/website/save" : "yak/website/update";
             $.ajax({
                 type: "POST",
@@ -173,6 +176,37 @@ var vm = new Vue({
             $("#jqGrid").jqGrid('setGridParam',{
                 page:page
             }).trigger("reloadGrid");
+        },
+        validator: function () {
+            if ( isBlank( vm.website.categoryId ) )
+            {
+                alert( '请选择所属分类' );
+                return true;
+            }
+
+            if ( isBlank( vm.website.name ) )
+            {
+                alert( '请填写网站名称' );
+                return true;
+            }
+
+            if ( isBlank( vm.website.url ) )
+            {
+                alert( '请填写网址' );
+                return true;
+            }
+
+            if ( isBlank( vm.website.icon ) )
+            {
+                alert( '请填写图标' );
+                return true;
+            }
+
+            if ( isBlank( vm.website.description ) )
+            {
+                alert( '请填写描述' );
+                return true;
+            }
         }
     }
 });
